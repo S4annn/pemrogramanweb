@@ -1,0 +1,164 @@
+/* Base Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Profile Section */
+.profile-container {
+  margin-bottom: 2rem;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+p {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Divider */
+hr {
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 800px;
+  border: none;
+  border-top: 2px solid #e0e0e0;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* Columns */
+.column {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.latihan-column {
+  border-top: 4px solid #3498db;
+}
+
+.tugas-column {
+  border-top: 4px solid #e74c3c;
+}
+
+.column-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.latihan-column .column-title {
+  color: #ffff;
+}
+
+.tugas-column .column-title {
+  color: #ffff;
+}
+
+/* Lists */
+.exercise-list,
+.assignment-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.exercise-list li,
+.assignment-list li {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.exercise-list li {
+  background-color: #e8f4fc;
+  border-left: 3px solid #3498db;
+}
+
+.assignment-list li {
+  background-color: #fde8e8;
+  border-left: 3px solid #e74c3c;
+}
+
+.exercise-list li:hover,
+.assignment-list li:hover {
+  transform: translateX(5px);
+}
+
+.exercise-list li a,
+.assignment-list li a {
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.exercise-list li a {
+  color: #2980b9;
+}
+
+.assignment-list li a {
+  color: #c0392b;
+}
+
+.exercise-list li:hover a {
+  color: #1a5276;
+}
+
+.assignment-list li:hover a {
+  color: #922b21;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .column {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}

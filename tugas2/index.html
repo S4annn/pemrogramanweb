@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rent Car S4ann</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+            
+            #search {
+                background: url("https://www.rentluxurycars.ae/wp-content/uploads/2023/08/Rent-Luxury-Cars-in-Dubai-scaled.webp");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 40em;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .title {
+                width: 100%;
+                text-align: center;
+            }
+            .title h1 {
+                margin-bottom: 20px;
+                font-size: 28px;
+            }
+            .title p {
+                font-size: 18px;
+            }
+            .title hr {
+                width: 50%;
+                margin: 20px auto;
+                opacity: 0.5;
+            }
+            
+            .form-container {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .form-group {
+                width: 150px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                text-align-last: center;
+            }
+            
+            .form-group input,
+            .form-group select {
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: rgba(255,255,255,0.8);
+                width: 100%;
+            }
+            
+            .form-group input::placeholder {
+                color: #999;
+                text-align: center;
+            }
+            
+            button {
+                padding: 8px 25px;
+                background-color: #ff9800;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                align-self: flex-end;
+            }
+            
+            button:hover {
+                background-color: #e68900;
+            }
+            
+            .cars-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 30px;
+                padding: 30px;
+                max-width: 1250px;
+                margin: 0 auto;
+            }
+            
+            .car-card {
+                background: white;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            
+            .car-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .car-image img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+            
+            .car-info {
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .car-info h2 {
+                font-size: 22px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+            
+            .car-info p {
+                font-size: 16px;
+                color: #666;
+                margin-bottom: 15px;
+            }
+            
+            .car-info .price {
+                font-weight: bold;
+                color: black;
+            }
+            
+            .car-info button {
+                width: 50%;
+                padding: 12px;
+                font-size: 16px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 768px) {
+                .cars-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                
+                .form-container {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    max-width: 500px;
+                }
+                
+                .form-group {
+                    width: 120px;
+                }
+                
+                button {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .cars-container {
+                    grid-template-columns: 1fr;
+                    padding: 20px;
+                }
+                
+                .form-container {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                    max-width: 300px;
+                }
+                
+                .form-group {
+                    width: 100%;
+                }
+                
+                #search {
+                    height: auto;
+                    padding: 40px 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="search">
+            <div class="title">
+                <h1>CAR Rental</h1>
+                <p>Your Dream Car, One Click Away</p>
+                <hr />
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="origin">Your Rental Location</label>
+                    <select name="origin" id="origin">
+                        <option value="JKT">Jakarta</option>
+                        <option value="BDO">Bandung</option>
+                        <option value="DPS">Bali</option>
+                        <option value="YGY">Yogyakarta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rental-start">Rental Start Date</label>
+                    <input type="date" placeholder="02/04/2025" />
+                </div>
+                <div class="form-group">
+                    <label for="start-time">Start Time</label>
+                    <input type="text" placeholder="20:30" />
+                </div>
+                <div class="form-group">
+                    <label for="rental-end">Rental End Date</label>
+                    <input type="date" placeholder="03/04/2025" />
+                </div>
+                <div class="form-group">
+                    <label for="end-time">End Time</label>
+                    <input type="text" placeholder="21:30" />
+                </div>
+                <button>Search</button>
+            </div>
+        </div>
+
+        <div class="cars-container">
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://th.bing.com/th/id/OIP.GaoHDSRd4FTZWa0LcF5_aAHaFW?rs=1&pid=ImgDetMain"
+                        alt="Luxury Sedan" />
+                </div>
+                <div class="car-info">
+                    <h2>Luxury Sedan</h2>
+                    <p>Comfort and elegance for your journey.</p>
+                    <p class="price">Rp. 380.000/day</p>
+                    <button>Rent Now</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://carwow-uk-wp-3.imgix.net/Volvo-XC40-1-e1532079968836.jpg"
+                        alt="SUV" />
+                </div>
+                <div class="car-info">
+                    <h2>SUV</h2>
+                    <p>Spacious and powerful for any terrain.</p>
+                    <p class="price">Rp. 280.000/day</p>
+                    <button>Rent Now</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://th.bing.com/th/id/R.80f8ebf901d7f7403315ccea0d559e72?rik=WsKywHVHNenimg&riu=http%3a%2f%2fmotorreview.com%2fwp-content%2fuploads%2f2014%2f04%2f2012ScionIQ015.jpg&ehk=96azUGc8smSfQPHk8E4ot1mEr8yW1KRG0FrsO0zMpcQ%3d&risl=&pid=ImgRaw&r=0"
+                        alt="Toyota Scion iQ" />
+                </div>
+                <div class="car-info">
+                    <h2>Toyota Scion iQ</h2>
+                    <p>Perfect for city travel and easy parking.</p>
+                    <p class="price">Rp. 300.000/day</p>
+                    <button>Rent Now</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-image">
+                    <img
+                        src="https://img.philcarprice.com/2022/01/17/SYHygZTD/toyota-alphard-2022-price-philippines-007b.jpg"
+                        alt="Toyota Alphard" />
+                </div>
+                <div class="car-info">
+                    <h2>Toyota Alphard</h2>
+                    <p>Experience the thrill of open-top driving, Best Car for
+                        families.</p>
+                    <p class="price">Rp. 520.000/day</p>
+                    <button>Rent Now</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
