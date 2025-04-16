@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flight Search</title>
+        <style>
+     * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: Arial, sans-serif;
+     }
+
+     body {
+       display: flex;
+       justify-content: center;
+       background: #ecf0f1;
+       padding: 20px 0;
+     }
+
+     .container {
+       width: 80%;
+       display: flex;
+       background: white;
+       border-radius: 10px;
+       overflow: hidden;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     }
+
+     .sidebar {
+       width: 25%;
+       background: #2c3e50;
+       color: white;
+       padding: 20px;
+     }
+
+     .sidebar h2 {
+       margin-bottom: 10px;
+       font-size: 22px;
+     }
+
+     .airline-list {
+       list-style: none;
+     }
+
+     .airline-list li {
+       padding: 10px;
+       cursor: pointer;
+       background: #34495e;
+       margin: 5px 0;
+       border-radius: 5px;
+       text-align: center;
+     }
+
+     .airline-list li:hover {
+       background: #1abc9c;
+     }
+
+     .main-content {
+       width: 75%;
+       padding: 20px;
+     }
+
+     .card {
+       background: white;
+       padding: 15px;
+       border-radius: 10px;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       margin-bottom: 15px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       border-left: 5px solid #3498db;
+     }
+
+     .card h3 {
+       margin-bottom: 5px;
+       font-size: 18px;
+       color: #2c3e50;
+     }
+
+     .card p {
+       margin: 5px 0;
+       font-size: 14px;
+     }
+
+     .price {
+       font-weight: bold;
+       color: #e74c3c;
+       font-size: 16px;
+     }
+
+     @media (max-width: 768px) {
+       .container {
+         flex-direction: column;
+       }
+
+       .sidebar {
+         width: 100%;
+         text-align: center;
+       }
+
+       .main-content {
+         width: 100%;
+       }
+     }
+   </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <h2>Airlines</h2>
+                <ul class="airline-list">
+                    <li>Garuda Indonesia</li>
+                    <li>AirAsia</li>
+                    <li>Citilink</li>
+                    <li>Lion Air</li>
+                    <li>Batik Air</li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <div class="card">
+                    <div>
+                        <h3>Garuda Indonesia</h3>
+                        <p>Departure: 08:00</p>
+                        <p>Arrival: 10:30</p>
+                        <p>Duration: 2h 30m</p>
+                    </div>
+                    <p class="price">IDR 1.200.000</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>AirAsia</h3>
+                        <p>Departure: 09:15</p>
+                        <p>Arrival: 11:45</p>
+                        <p>Duration: 2h 30m</p>
+                    </div>
+                    <p class="price">IDR 950.000</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Citilink</h3>
+                        <p>Departure: 07:30</p>
+                        <p>Arrival: 09:45</p>
+                        <p>Duration: 2h 15m</p>
+                    </div>
+                    <p class="price">IDR 1.000.000</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Lion Air</h3>
+                        <p>Departure: 06:45</p>
+                        <p>Arrival: 09:00</p>
+                        <p>Duration: 2h 15m</p>
+                    </div>
+                    <p class="price">IDR 850.000</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h3>Batik Air</h3>
+                        <p>Departure: 10:00</p>
+                        <p>Arrival: 12:30</p>
+                        <p>Duration: 2h 30m</p>
+                    </div>
+                    <p class="price">IDR 1.100.000</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

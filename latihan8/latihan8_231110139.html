@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UMBY Travel</title>
+
+        <style>
+     #search {
+       background: url("https://ik.imagekit.io/tvlk/image/imageResource/2024/10/13/1728842486136-a548373594df6a1747ed98305765c89a.png?tr=q-75");
+       background-repeat: no-repeat;
+       background-size: cover;
+       height: 30em;
+       color: white;
+
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .title {
+       width: 100%;
+       text-align: center;
+     }
+     .title h1 {
+       font-size: 28px;
+     }
+     .title p {
+       font-size: 18px;
+     }
+     .title hr {
+       width: 50%;
+       margin: 20px auto;
+       opacity: 0.5;
+     }
+
+     .form-container {
+       background-color: rgba(0, 0, 0, 0.5);
+       padding: 20px;
+       border-radius: 10px;
+       margin-top: 20px;
+       display: flex;
+       align-items: center;
+       gap: 20px;
+     }
+     .form-group {
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       text-align: left;
+     }
+     button {
+       padding: 8px 25px;
+       background-color: #ff9800;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       align-self: flex-end;
+     }
+     button:hover {
+       background-color: #e68900;
+     }
+   </style>
+    </head>
+    <body>
+        <div id="search">
+            <div class="title">
+                <h1>UMBY Travel</h1>
+                <p>Find your best flight here</p>
+                <hr />
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="origin">From</label>
+                    <select name="origin" id="origin">
+                        <option value="JKT">Jakarta</option>
+                        <option value="BDO">Bandung</option>
+                        <option value="DPS">Bali</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="destination">To</label>
+                    <select name="destination" id="destination">
+                        <option value="JKT">Jakarta</option>
+                        <option value="BDO">Bandung</option>
+                        <option value="DPS">Bali</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" />
+                </div>
+                <div class="form-group">
+                    <label for="passenger">Passenger</label>
+                    <input type="number" />
+                </div>
+                <button>Search</button>
+            </div>
+        </div>
+    </body>
+</html>
