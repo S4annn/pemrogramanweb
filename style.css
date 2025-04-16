@@ -106,6 +106,7 @@ hr {
 
 .exercise-list li {
   background-color: white;
+  border-top: 1px solid black;
   border-left: 3px solid black;
   border-right: 3px solid black;
   border-bottom: 3px solid black;
@@ -113,6 +114,7 @@ hr {
 
 .assignment-list li {
   background-color: white;
+  border-top: 1px solid black;
   border-left: 3px solid black;
   border-right: 3px solid black;
   border-bottom: 3px solid black;
