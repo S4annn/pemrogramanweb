@@ -42,8 +42,8 @@ p {
   margin-bottom: 2rem;
 }
 
-span{
-  color : #dc3545;
+.no-task {
+  color: red;
 }
   
 hr {
