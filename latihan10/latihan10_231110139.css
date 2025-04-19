@@ -1,0 +1,13 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

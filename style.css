@@ -42,7 +42,10 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Divider */
+.no-task {
+  color: red;
+}
+
 hr {
   margin: 2rem auto;
   width: 80%;
