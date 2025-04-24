@@ -61,3 +61,28 @@ body {
 .assesment-list li:hover a {
   color: #922b21;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .column {
+    width: 100%;
+    transform: none;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .column-title {
+    font-size: 1.2rem;
+  }
+
+  .assesment-list li {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .assesment-list li a {
+    font-size: 0.95rem;
+  }
+}

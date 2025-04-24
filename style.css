@@ -154,7 +154,7 @@ p {
 #darkModeToggle {
   position: fixed;
   top: 20px;
-  right: 10px;
+  right: 20px;
   z-index: 1000;
   background-color: #333;
   color: white;
@@ -162,7 +162,10 @@ p {
   padding: 10px 15px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: background-color 0.3s ease;
 }
 
@@ -227,5 +230,11 @@ body.dark-mode hr {
 
   h1 {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #darkModeToggle .label {
+    display: none;
   }
 }

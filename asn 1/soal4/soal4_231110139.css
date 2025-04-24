@@ -90,6 +90,9 @@ button:hover {
     width: 100%;
     justify-content: space-between;
   }
+  #search {
+    min-height: 100vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -109,5 +112,6 @@ button:hover {
   #search {
     height: auto;
     padding: 40px 20px;
+    min-height: 100vh;
   }
 }
