@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rental Kamera</title>
+        <link rel="stylesheet" href="soal4_231110139.css">
+    </head>
+    <body>
+        <div id="search">
+            <div class="title">
+                <h1>Rental Kamera</h1>
+                <p>Do you need a camera? Just click on the search button.</p>
+                <hr />
+            </div>
+
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="rental-start">Tanggal Pinjam</label>
+                    <input type="date" id="rental-start"
+                        placeholder="24/04/2025" />
+                </div>
+                <div class="form-group">
+                    <label for="rental-end">Tanggal Kembali</label>
+                    <input type="date" id="rental-end"
+                        placeholder="25/04/2025" />
+                </div>
+
+                <div class="form-group">
+                    <label for="camera-type">Kamera</label>
+                    <select id="camera-type">
+                        <option value="DSLR">Kamera DSLR</option>
+                        <option value="MLS">Kamera Mirrorless</option>
+                        <option value="SLS">Kamera SoniLens</option>
+                        <option value="FFM">Kamera FujiFilm</option>
+                    </select>
+                </div>
+                <button>Cek Stok Kamera</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -45,12 +45,7 @@ p {
 .no-task {
   color: red;
 }
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> aef6733da02c6f0b3bcc8ef75e84666d51bc0376
-hr {
+<<<<<<< HEAD =======>>>>>>>aef6733da02c6f0b3bcc8ef75e84666d51bc0376 hr {
   margin: 2rem auto;
   width: 80%;
   max-width: 800px;
@@ -154,6 +149,66 @@ hr {
 
 .assignment-list li:hover a {
   color: #922b21;
+}
+
+#darkModeToggle {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .column {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode h1,
+body.dark-mode .column-title {
+  color: #ffffff;
+}
+
+body.dark-mode p {
+  color: #cccccc;
+}
+
+body.dark-mode .exercise-list li,
+body.dark-mode .assignment-list li {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .exercise-list li a,
+body.dark-mode .assignment-list li a {
+  color: #ffffff;
+}
+
+body.dark-mode .exercise-list li:hover a {
+  color: #85c1e9;
+}
+
+body.dark-mode .assignment-list li:hover a {
+  color: #f1948a;
+}
+
+body.dark-mode hr {
+  border-top: 2px solid #333;
 }
 
 @media (max-width: 768px) {
